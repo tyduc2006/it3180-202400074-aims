@@ -8,6 +8,9 @@
 - Add cart printing functionality.
 - Add search by title.
 - Add discount calculation.
+- Add sort_by_title() to sort DVDs by title.
+- Add sort_by_cost() to sort DVDs by cost.
+- Add unit tests for cart sorting methods.
 
 ### Changed
 - Use Vietnamese messages for cart operations.

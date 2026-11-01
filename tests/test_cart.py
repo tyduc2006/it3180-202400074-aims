@@ -4,7 +4,36 @@ from aims.cart import Cart, MAX_NUMBERS_ORDERED
 
 
 class TestCart(unittest.TestCase):
+    def test_sort_by_title(self):
+        cart = Cart()
 
+        dvd1 = type("DVD", (), {"title": "Star Wars", "cost": 20})()
+        dvd2 = type("DVD", (), {"title": "Aladdin", "cost": 10})()
+        dvd3 = type("DVD", (), {"title": "The Lion King", "cost": 30})()
+
+        cart.items = [dvd1, dvd2, dvd3]
+        cart.sort_by_title()
+
+        self.assertEqual(
+            [dvd.title for dvd in cart.items],
+            ["Aladdin", "Star Wars", "The Lion King"]
+        )
+
+    def test_sort_by_cost(self):
+        cart = Cart()
+
+        dvd1 = type("DVD", (), {"title": "Star Wars", "cost": 20})()
+        dvd2 = type("DVD", (), {"title": "Aladdin", "cost": 10})()
+        dvd3 = type("DVD", (), {"title": "The Lion King", "cost": 30})()
+
+        cart.items = [dvd1, dvd2, dvd3]
+        cart.sort_by_cost()
+
+        self.assertEqual(
+            [dvd.cost for dvd in cart.items],
+            [10, 20, 30]
+        )
+            
     def test_add_dvd_until_full(self):
         cart = Cart()
 
