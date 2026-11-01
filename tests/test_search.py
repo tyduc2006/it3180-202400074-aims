@@ -1,5 +1,6 @@
 
 import unittest
+
 from aims.cart import Cart
 from aims.dvd import DigitalVideoDisc
 from aims.search import search_by_category, search_by_name
@@ -46,9 +47,12 @@ class TestSearchByName(unittest.TestCase):
             ["The Lion King"]
         )
 
-    def test_search_case_sensitive(self):
+    def test_search_case_insensitive(self):
         result = search_by_name(self.cart, "lion")
-        self.assertEqual(result, [])
+        self.assertEqual(
+            [dvd.title for dvd in result],
+            ["The Lion King"]
+        )
 
     def test_search_non_existing_name(self):
         result = search_by_name(self.cart, "Harry Potter")
