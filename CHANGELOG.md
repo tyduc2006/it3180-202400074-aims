@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-01
+
+### Added
+- Add search by category.
+
 ## [1.0.0] - 2026-11-01
 
 ### Added
