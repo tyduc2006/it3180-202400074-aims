@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-11-02
+
+### Fixed
+- Make search_by_name case-insensitive.
+
 ## [1.0.0] - 2026-11-01
 
 ### Added

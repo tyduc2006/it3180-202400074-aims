@@ -12,7 +12,7 @@ def search_by_name(cart, name):
     result = []
 
     for dvd in cart.items:
-        if name in dvd.title:
+        if name.lower() in dvd.title.lower():
             result.append(dvd)
 
     return result
